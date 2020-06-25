@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/angular-v10",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-v10"
+    }
+  },
+  "defaultProject": "angular-v10",
+  "cli": {
+    "analytics": false
+  }
 }
