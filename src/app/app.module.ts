@@ -1,21 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { registerLocaleData } from '@angular/common';
-import {LOCALE_ID, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import '@progress/kendo-angular-intl/locales/fr/all';
-import localFr from '@angular/common/locales/fr';
 
 import { AppComponent } from './app.component';
+import {IntlModule} from "@progress/kendo-angular-intl";
 
-registerLocaleData(localFr);
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    IntlModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'fr' }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
